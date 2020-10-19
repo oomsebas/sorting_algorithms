@@ -5,6 +5,7 @@
  * Bubble sort algorithm
  * @array: This is the data structure to be sorted
  * @size: The number of elements to be sorted (len of array)
+ * Return: None
  */
 void bubble_sort(int *array, size_t size)
 {

@@ -1,6 +1,5 @@
 #include "sort.h"
 
-
 /**
  *insertion_sort_list - function that sort a double linked list
  *@list: double linked list to sort
@@ -11,7 +10,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *head, *back, *frw, *lead;
 	int res = 0;
 
-	if (list == NULL || *list == NULL)
+	if (list == NULL || *list == '\0')
 		return;
 
 	head = *list;
@@ -34,7 +33,7 @@ void insertion_sort_list(listint_t **list)
 }
 
 /**
- *swap- function that perfoms the swap of two nodes
+ *swap - function that perfoms the swap of two nodes
  *@back: pointer to the back node
  *@head: pointer to the actual number to compare
  *@frw: pointer to the next node

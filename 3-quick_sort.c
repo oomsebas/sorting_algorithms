@@ -3,9 +3,10 @@
 
 /**
  * quick_sort - function that sorts an array of integers in
- *  ascending order using the Quick sort algorithm.
+ * ascending order using the Quick sort algorithm.
  * @array: the element to sort
  * @size: the number of elements to sort
+ * Return: None
  */
 void quick_sort(int *array, size_t size)
 {

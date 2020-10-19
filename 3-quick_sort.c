@@ -68,7 +68,7 @@ void arrange(int *array, int p, int r, size_t size)
 {
 	int q = 0;
 
-	while (p < r)
+	if (p < r)
 	{
 		q = partition(array, p, r, size);
 		arrange(array, p, q - 1, size);

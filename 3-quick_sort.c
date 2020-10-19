@@ -66,11 +66,11 @@ void arrange(int *array, int p, int r, size_t size)
 {
 	int q = 0;
 
-	if (p < r)
+	while (p < r)
 	{
 		q = partition(array, p, r, size);
 		arrange(array, p, q - 1, size);
-		arrange(array, q + 1, r, size);
+		p = q + 1;;
 
 	}
 }

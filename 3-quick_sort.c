@@ -72,7 +72,7 @@ void arrange(int *array, int p, int r, size_t size)
 	{
 		q = partition(array, p, r, size);
 		arrange(array, p, q - 1, size);
-		p = q + 1;
+		arrange(array, q + 1, r, size);
 
 	}
 }

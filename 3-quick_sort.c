@@ -1,8 +1,7 @@
 #include "sort.h"
 
 /**
- * quick_sort - function that sorts an array of integers in
- * ascending order using the Quick sort algorithm.
+ * quick_sort - function that sorts an with qick sort algorithm
  * @array: the element to sort
  * @size: the number of elements to sort
  * Return: None
@@ -17,12 +16,12 @@ void quick_sort(int *array, size_t size)
 }
 
 /**
- *partition - function to create the subarrays
- *@array: the array to sort
- *@p: index to the start of the first subarray
- *@r: end index of the second sub array
- *@size: the size of the array
- *Return: the index of the pivot
+ * partition - function to create the subarrays
+ * @array: the array to sort
+ * @p: index to the start of the first subarray
+ * @r: end index of the second sub array
+ * @size: the size of the array
+ * Return: the index of the pivot
  */
 int partition(int *array, int p, int r, size_t size)
 {
@@ -46,7 +45,7 @@ int partition(int *array, int p, int r, size_t size)
 	}
 	if (array[i + 1] > array[r])
 	{
-	 	tmp = array[i + 1];
+		tmp = array[i + 1];
 		array[i + 1] = array[r];
 		array[r] = tmp;
 		print_array(array, size);
@@ -56,12 +55,12 @@ int partition(int *array, int p, int r, size_t size)
 }
 
 /**
- *arrange - recursion function to sort the subarrays
- *@array: the array to sort
- *@p: index to the start of the first subarray
- *@r: end index of the second sub array
- *@size: the size of the array
- *Return: None
+ * arrange - recursion function to sort the subarrays
+ * @array: the array to sort
+ * @p: index to the start of the first subarray
+ * @r: end index of the second sub array
+ * @size: the size of the array
+ * Return: None
  */
 void arrange(int *array, int p, int r, size_t size)
 {

@@ -37,19 +37,21 @@ int partition(int *array, int p, int r, size_t size)
 		if (array[j] <= x)
 		{
 			i = i + 1;
-			tmp = array[i];
-			array[i] = array[j];
-			array[j] = tmp;
 			if (i != j)
+			{
+				tmp = array[i];
+				array[i] = array[j];
+				array[j] = tmp;
 				print_array(array, size);
+			}
 		}
 	}
-	if (array[r] < array[i + 1])
+	if (array[i + 1] > array[r])
 	{
-	    tmp = array[i + 1];
-	    array[i + 1] = array[r];
-	    array[r] = tmp;
-	    print_array(array, size);
+	 	tmp = array[i + 1];
+		array[i + 1] = array[r];
+		array[r] = tmp;
+		print_array(array, size);
 	}
 	return (i + 1);
 
@@ -70,7 +72,7 @@ void arrange(int *array, int p, int r, size_t size)
 	{
 		q = partition(array, p, r, size);
 		arrange(array, p, q - 1, size);
-		p = q + 1;;
+		p = q + 1;
 
 	}
 }

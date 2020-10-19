@@ -9,16 +9,22 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned int  minIndex, tmp;
+	unsigned int tmp;
 	unsigned int i;
+	unsigned int minIndex;
 
 	for (i = 0; i <= size - 1; i++)
 	{
 		minIndex = selection(array, i, size);
-		tmp = array[i];
-		array[i] = array[minIndex];
-		array[minIndex] = tmp;
+		if (i != minIndex)
+		{
+			tmp = array[i];
+			array[i] = array[minIndex];
+			array[minIndex] = tmp;
+			print_array(array, size);
+		}
 	}
+
 }
 
 /**
@@ -34,12 +40,11 @@ unsigned int selection(int *array, unsigned int start, size_t size)
 	unsigned int j;
 
 	minIndex = start;
-	for (j = start + 1; j < size; j++)
+	for (j = start + 1; j <= size - 1; j++)
 	{
 		if (array[minIndex] > array[j])
 		{
 			minIndex = j;
-			print_array(array, size);
 		}
 	}
 	return (minIndex);

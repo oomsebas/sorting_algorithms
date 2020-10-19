@@ -15,7 +15,6 @@ void quick_sort(int *array, size_t size)
 		return;
 	arrange(array, p, size - 1, size);
 	print_array(array, size);
-
 }
 
 /**
@@ -44,10 +43,10 @@ int partition(int *array, int p, int r, size_t size)
 			array[j] = tmp;
 		}
 	}
-	print_array(array, size);
 	tmp = array[i + 1];
 	array[i + 1] = array[r];
 	array[r] = tmp;
+	print_array(array, size);
 	return (i + 1);
 
 }

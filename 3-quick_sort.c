@@ -1,6 +1,5 @@
 #include "sort.h"
 
-
 /**
  * quick_sort - function that sorts an array of integers in
  * ascending order using the Quick sort algorithm.
@@ -23,13 +22,11 @@ void quick_sort(int *array, size_t size)
  *@p: index to the start of the first subarray
  *@r: end index of the second sub array
  *@size: the size of the array
- *Return: None
+ *Return: the index of the pivot
  */
 int partition(int *array, int p, int r, size_t size)
 {
-
 	int tmp, x, i, j;
-	(void)size;
 
 	x = array[r];
 	i = p - 1;
@@ -57,6 +54,7 @@ int partition(int *array, int p, int r, size_t size)
 	return (i + 1);
 
 }
+
 /**
  *arrange - recursion function to sort the subarrays
  *@array: the array to sort

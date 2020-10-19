@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- *insertion_sort_list - function that sort a double linked list
- *@list: double linked list to sort
- *Retun: None
+ * insertion_sort_list - function that sort a double linked list
+ * @list: double linked list to sort
+ * Retun: None
  */
 void insertion_sort_list(listint_t **list)
 {
@@ -33,12 +33,12 @@ void insertion_sort_list(listint_t **list)
 }
 
 /**
- *swap - function that perfoms the swap of two nodes
- *@back: pointer to the back node
- *@head: pointer to the actual number to compare
- *@frw: pointer to the next node
- *@list: linked list to order
- *Return: 1 if sucess, 0 if not.
+ * swa - function that perfoms the swap of two nodes
+ * @back: pointer to the back node
+ * @head: pointer to the actual number to compare
+ * @frw: pointer to the next node
+ * @list: linked list to order
+ * Return: 1 if sucess, 0 if not.
  */
 int swa(listint_t **back, listint_t **head, listint_t **frw, listint_t **list)
 {
@@ -55,7 +55,6 @@ int swa(listint_t **back, listint_t **head, listint_t **frw, listint_t **list)
 			*head = *frw;
 
 		}
-
 		else if ((*head)->next->next == NULL)
 		{
 			(*head)->next = NULL;

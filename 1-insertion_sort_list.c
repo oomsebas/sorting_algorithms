@@ -19,12 +19,12 @@ void insertion_sort_list(listint_t **list)
 	{
 		frw = head->next;
 		back = head->prev;
-		res = swap(&back, &head, &frw, list);
+		res = swa(&back, &head, &frw, list);
 		lead = head;
 		while (res)
 		{
 			print_list(*list);
-			res = swap(&back, &head, &frw, list);
+			res = swa(&back, &head, &frw, list);
 
 		}
 		head = lead;
@@ -41,7 +41,7 @@ void insertion_sort_list(listint_t **list)
  *@list: linked list to order
  *Return: 1 if sucess, 0 if not.
  */
-int swap(listint_t **back, listint_t **head, listint_t **frw, listint_t **list)
+int swa(listint_t **back, listint_t **head, listint_t **frw, listint_t **list)
 {
 	if ((*head)->next->n < (*head)->n)
 	{
